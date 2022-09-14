@@ -57,7 +57,8 @@ class complete_transaction extends Command
                     $payment->save();
                     //update the user subscription status to active
                     $user = User::find($payment->user_id);
-                    $user->subscriptionPlan = $payment->plan_id;   
+                    $user->subscriptionPlan = $payment->plan_id;
+                    $user->save();   
                 }
                 if($transaction_details['status'] == 'PENDING' ){
                     //update the payment status to success
@@ -65,7 +66,10 @@ class complete_transaction extends Command
                     $payment->save();
                     //update the user subscription status to active
                     $user = User::find($payment->user_id);
-                    $user->subscriptionPlan = $payment->plan_id;   
+                    $user->subscriptionPlan = $payment->plan_id;
+                    //save the updated user details
+                    $user->save();
+
                 }
                 if($transaction_details['status'] == 'FAILED'){
                     //update the payment status to success
