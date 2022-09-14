@@ -78,10 +78,6 @@ class AuthController extends Controller
             'name' => 'required',
 
         ]);
-
-        
-        
-
         //return back with error message if validation fails
         if ($validator->fails()) {
             return redirect()
@@ -116,24 +112,7 @@ class AuthController extends Controller
         }
 
       
-         //redirect the user to the dashboard
-
-
-        //attempt to login user
-        // if (Auth::attempt($credentials)) {
-        //     //if successful, redirect to their intended location
-        //     $names = Auth::user()->name;
-        //     $request->session()->put('names', $names);
-        //     return redirect()
-        //         ->route('admin')
-        //         ->with(
-        //             'success',
-        //             " Welcome Back {$names} "
-        //         );
-        // } else {
-        //     //if not, redirect back to login with the form data
-        //     return redirect()->back()->with('status', 'Invalid Credentials');
-        // }
+        
     }
 
     //confirming email
