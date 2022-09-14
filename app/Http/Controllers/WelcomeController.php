@@ -10,8 +10,7 @@ class WelcomeController extends Controller
 {
     //
     public function welcome(){
-        // $comments= CommentModel::where('approved', '=', true)->get();
-        // return view('welcome', compact('comments'));
+         return view('welcome');
     }
 
 
