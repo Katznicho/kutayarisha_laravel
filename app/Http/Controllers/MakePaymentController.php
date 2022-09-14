@@ -109,6 +109,15 @@ class MakePaymentController extends Controller
 
         
         
-        echo $response;
+        //echo $response;
     }
+
+    //mojaloop api payment
+    public function mojaloop_payment(Request $request)
+    {
+        //use try catch to handle errors
+        
+        
+    }
+    
 }

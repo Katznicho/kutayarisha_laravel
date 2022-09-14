@@ -12,7 +12,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('dist/img/avatar3.png') }}" class="img-circle elevation-2" alt="User Image">
+                <img src="{{ asset('dist/img/user1-128x128.jpg') }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="#" class="d-block">
@@ -69,7 +69,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
+                        <i class="nav-icon fa fa-binoculars"></i>
                         <p>
                              Baby Products
                             <i class="right fas fa-angle-left"></i>
@@ -77,9 +77,9 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('comments.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>View Comments</p>
+                                <p>Buy Products</p>
                             </a>
                         </li>
 
@@ -91,7 +91,7 @@
                 <!--products-->
                 <li class="nav-item">
                     <a class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
+                        <i class="nav-icon fa fa-lemon-o"></i>
                         <p>
                              Foods
                             <i class="right fas fa-angle-left"></i>
@@ -99,9 +99,9 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('comments.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>View Comments</p>
+                                <p>View Foods</p>
                             </a>
                         </li>
 

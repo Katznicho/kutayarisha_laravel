@@ -42,9 +42,18 @@
                   <a href="{{route('pricing')}}" class="btn btn-danger">Subscribe</a>
                 </div>
               </div>
+              @elseif ($user->subscriptionPlan)
+              <div class="col-md-12">
+                <div class="card card-success">
+                  <div class="card-header">
+                    <h3 class="card-title">You are subscribed to {{$planName->name}}</h3>
+                  </div>
+                  <div class="card-body">
+                    <p>Enjoy all the features of the application</p>
+                    <a href="{{route('pricing')}}" class="btn btn-success">View Plan</a>
+                  </div>
+                </div>
 
-
-             
            @endif
 
         
