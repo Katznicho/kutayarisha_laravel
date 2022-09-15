@@ -25,7 +25,7 @@
  
         
           <div class="row">
-                       <a href="{{route('majoloop.show')}}" class="btn btn-success">Lookup User</a>
+                       <a href="{{route('mojaloop.show','1')}}" class="btn btn-success">Lookup User</a>
            
             
                 </div>

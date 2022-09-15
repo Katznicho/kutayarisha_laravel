@@ -22,8 +22,8 @@
                      <p>Name : {{$data['party']['name']}}</p>
                     <p>Phone Number : {{$data['party']['partyIdInfo']['partyIdentifier']}}</p>
                      <p>Party Id TYpe : {{$data['party']['partyIdInfo']['partyIdType']}}</p>
+                     // add a 
 
-                     
                 </div>
 
 
