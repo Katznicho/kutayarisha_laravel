@@ -109,6 +109,26 @@
 
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="nav-icon fa fa-lemon-o"></i>
+                        <p>
+                             Moja loop Demo
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('mojaloop.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Start Demo</p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

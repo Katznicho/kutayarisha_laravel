@@ -8,6 +8,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\MakePaymentController;
+use App\Http\Controllers\Mojaloop;
 
 
 
@@ -85,6 +86,12 @@ Route::middleware(['web', 'auth'])
 
         //users
         Route::resource('users', UserController::class);
+        //mojaloop resource
+        Route::resource('mojaloop', Mojaloop::class);
+        //loop up
+        // Route::get('/mojaloop/lookUp', [Mojaloop::class, 'lookUp'])->name(
+        //     'lookUp'
+        // );
         //comments
         Route::resource('comments', CommentController::class);
         Route::get('comments/approve/{id}', [CommentController::class, 'approve'])->name('comments.approve');

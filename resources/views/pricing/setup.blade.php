@@ -32,10 +32,7 @@
                                              class="form-control" 
                                               value="{{ Auth::user()->phone }}"
                                             placeholder="Enter Phone Number" />
-
-
                                             <br />
-
                                         <input type="button" value="Make Payment"
                                         class="btn btn-primary btn-block btn-lg" />
 
@@ -106,6 +103,8 @@
                     $.ajax({
                         url: "{{ route('payment') }}",
                         type: "POST",
+                        //before send function
+                         
                         data: {
                             phone: phone,
                             amount: price,
