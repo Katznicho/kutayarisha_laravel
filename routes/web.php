@@ -89,9 +89,9 @@ Route::middleware(['web', 'auth'])
         //mojaloop resource
         Route::resource('mojaloop', Mojaloop::class);
         //loop up
-        // Route::get('/mojaloop/lookUp', [Mojaloop::class, 'lookUp'])->name(
-        //     'lookUp'
-        // );
+        Route::get('/start', [Mojaloop::class, 'create'])->name(
+            'start'
+        );
         //comments
         Route::resource('comments', CommentController::class);
         Route::get('comments/approve/{id}', [CommentController::class, 'approve'])->name('comments.approve');

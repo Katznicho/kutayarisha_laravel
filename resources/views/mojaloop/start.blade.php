@@ -3,7 +3,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 @include('sidebar.sidebar')
-<x-wrapper-component pageName="Moja loop Demo"
+<x-wrapper-component pageName="Majo loop Demo"
 :crumbs="array('admin'=>'Mojaloop demo')"
 />
  <!-- Main content -->
@@ -19,11 +19,11 @@
                 <p>W are illustration how to use mojaloop </p>
                 
                 <div id="mojaloop">
-                     <p>Name : {{$data['party']['name']}}</p>
-                    <p>Phone Number : {{$data['party']['partyIdInfo']['partyIdentifier']}}</p>
-                     <p>Party Id TYpe : {{$data['party']['partyIdInfo']['partyIdType']}}</p>
+                     <p>Amount  to pay: {{$data['authorization']['amount']['amount']}}</p>
+                    <p>Currency  : {{$data['authorization']['amount']['currency']}}</p>
+
                      
-                        <a href="{{route('start')}}" class="btn btn-success">Initiate Payment</a>
+                        <a href="{{route('start')}}" class="btn btn-success">Confirm Payment</a>
 
                 </div>
 
