@@ -22,8 +22,38 @@
                      <p>Name : {{$data['party']['name']}}</p>
                     <p>Phone Number : {{$data['party']['partyIdInfo']['partyIdentifier']}}</p>
                      <p>Party Id TYpe : {{$data['party']['partyIdInfo']['partyIdType']}}</p>
+
                      
-                        <a href="{{route('start')}}" class="btn btn-success">Initiate Payment</a>
+                        <form action="{{route('start')}}" method="post">
+                             @csrf
+                               <div class="d-flex flex-row pb-3">
+                                            
+                                <label for="amount" class="col-sm-2 col-form-label">Amount</label>
+                                            <input type="text"
+                                             class="form-control" 
+                                              value=""
+                                               name="amount"
+                                               required
+                                            placeholder="Enter amount" />
+                                        
+                                            <select name="currency" required class="form-control">
+                                                <option value="KES">KES</option>
+                                                <option value="USD">USD</option>
+                                                <option value="UGX">UGX</option>
+                                            </select>
+                                            
+                                            <br />
+
+
+                                        </div>
+
+                                        
+                                        <button type="submit" class="btn btn-success">Initiate Payment</button>
+
+                        </form>        
+
+                     
+
 
                 </div>
 

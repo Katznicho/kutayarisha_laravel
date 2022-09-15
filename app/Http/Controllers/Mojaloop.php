@@ -58,6 +58,13 @@ class Mojaloop extends Controller
 
 
         $curl = curl_init();
+        //get the amount and currency from the form
+        $amount = $request->amount;
+        $currency = $request->currency;
+        
+        //create a json object of amount and currency
+        $amount = json_encode(array("amount" => $amount, "currency" => $currency));
+    
         
         curl_setopt_array($curl, array(
           CURLOPT_URL => 'http://sandbox.mojaloop.io/switch-ttk-backend/thirdpartyTransaction/b51ec534-ee48-4575-b6a9-ead2955b8069/initiate',
@@ -84,8 +91,8 @@ class Mojaloop extends Controller
             },
             "amountType":"RECEIVE",
             "amount":{
-              "currency":"PHP",
-              "amount":"123.47"
+              "currency":"UGX",
+              "amount":"5000"
             },
             "transactionType":{
               "scenario":"TRANSFER",
@@ -104,9 +111,10 @@ class Mojaloop extends Controller
         
         curl_close($curl);
         //echo $response;
+        //dd($response);
       
         $data = json_decode($response, true);
-        //dd($data['authorization']['amount']['amount']);
+        //dd($data['authorization']);
 
         return view('mojaloop.start', compact('data'));
         

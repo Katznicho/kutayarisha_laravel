@@ -89,7 +89,7 @@ Route::middleware(['web', 'auth'])
         //mojaloop resource
         Route::resource('mojaloop', Mojaloop::class);
         //loop up
-        Route::get('/start', [Mojaloop::class, 'create'])->name(
+        Route::post('/start', [Mojaloop::class, 'create'])->name(
             'start'
         );
         Route::get('/confirm', [Mojaloop::class, 'create'])->name(

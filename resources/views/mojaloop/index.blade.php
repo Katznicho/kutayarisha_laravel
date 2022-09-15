@@ -16,7 +16,7 @@
         <div class="row">
             <div class="">
                  <div>
-                       <p>W are illustration how to use mojaloop in free steps</p>
+                       <p>W are illustration how to use mojaloop in three steps</p>
                  </div>
                  <div>
                       <p>We are looping up a user using default number 
