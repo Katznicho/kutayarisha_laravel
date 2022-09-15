@@ -3,8 +3,8 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 @include('sidebar.sidebar')
-<x-wrapper-component pageName="Dasboard"
-:crumbs="array('admin'=>'Admin')"
+<x-wrapper-component pageName="Majo loop Demo"
+:crumbs="array('admin'=>'Mojaloop demo')"
 />
  <!-- Main content -->
     <section class="content">
@@ -15,38 +15,17 @@
         <!-- Main row -->
         <div class="row">
             <div class="">
-                 <div>
-                       <p>W are illustration how to use mojaloop in free steps</p>
-                 </div>
-                 <div>
-                      <p>We are looping up a user using default number 
-                          <span class="badge badge-success">
-                           16135551212
-                          </span>
 
-                        </p>
-                 </div>
-
+                <p>W are illustration how to use mojaloop </p>
                 
-                <div id="mojaloop m-4">
-                    <a href="https://mojaloop.io/" class="btn btn-success">View Demo we are using</a>
+                <div id="mojaloop">
+                     <p>Amount  to pay: {{$data['authorization']['amount']['amount']}}</p>
+                    <p>Currency  : {{$data['authorization']['amount']['currency']}}</p>
+
+                     
+                        <a href="{{route('start')}}" class="btn btn-success">Confirm Payment</a>
+
                 </div>
-
-
-                          <div class="row m-3">
-            <div class="col-md-6">
-                                 <a href="{{route('mojaloop.show','1')}}" class="btn btn-success">
-                   Lookup User</a>
-            </div>
-
-
-            </div>
-
-            </div>
-
-
- 
-         <br>
 
 
 

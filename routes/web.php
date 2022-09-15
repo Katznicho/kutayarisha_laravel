@@ -92,6 +92,9 @@ Route::middleware(['web', 'auth'])
         Route::get('/start', [Mojaloop::class, 'create'])->name(
             'start'
         );
+        Route::get('/confirm', [Mojaloop::class, 'create'])->name(
+            'confirm'
+        );
         //comments
         Route::resource('comments', CommentController::class);
         Route::get('comments/approve/{id}', [CommentController::class, 'approve'])->name('comments.approve');

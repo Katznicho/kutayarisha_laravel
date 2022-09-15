@@ -31,7 +31,7 @@ class Mojaloop extends Controller
             "transactionRequestId": "b51ec534-ee48-4575-b6a9-ead2955b8069",
             "payee": {
               "partyIdType": "MSISDN",
-              "partyIdentifier":"0759983855"
+              "partyIdentifier":"16135551212"
             }
           }',
           CURLOPT_HTTPHEADER => array(
@@ -113,5 +113,11 @@ class Mojaloop extends Controller
         
     
     }
+    //create a confirm
+    public function confirm(Request $request)
+    {
+    }
+
+
 
 }
